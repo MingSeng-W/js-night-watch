@@ -1,10 +1,20 @@
 <template>
 <div id="detail">
-    <bm-row>
-        <bm-col :span="15">
-
-        </bm-col>
-    </bm-row>
+    <el-row>
+        <el-col :span="6">
+            <span>地址:</span><span >{{this.detail.address}}</span>
+        </el-col>
+    </el-row>
+    <el-row>
+       <el-col :span="6">
+              <span>日期:</span><span>{{this.detail.date}}</span>
+        </el-col>
+    </el-row>
+    <el-row>
+       <el-col :span="6">
+              <span>姓名:</span><span>{{this.detail.name}}</span>
+        </el-col>
+    </el-row>
 </div>
 </template>
 
@@ -17,7 +27,7 @@ export default {
     }
   },
   created() {
-      this.detail = this.$router.params.detail
+      this.detail = this.$route.query.detail
   },
   methods:{
       search(){
@@ -52,7 +62,7 @@ export default {
       },
       toDetail(detail){
           let user  = detail
-          this.$router.push({'/detail', params:{detail: user}})
+          this.$router.push({path: '/detail', params:{detail: user}})
       }
   }
 }

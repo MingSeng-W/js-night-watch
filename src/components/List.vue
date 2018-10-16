@@ -31,7 +31,7 @@
         label="操作"
         width="100">
         <template slot-scope="scope">
-            <el-button @click="toDetail(scope.row)" type="text" size="small" >查看</el-button>
+            <el-button @click="toDetail(scope.row)" type="text" size="small" class="show-detail">查看</el-button>
         </template>
     </el-table-column>
     </el-table>
@@ -97,7 +97,7 @@ export default {
       },
       toDetail(detail){
           let user  = detail
-          this.$router.push({'/detail', params:{detail: user}})
+          this.$router.push({ path:'/detail', query: { detail: user}})
       }
   }
 }
