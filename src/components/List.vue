@@ -96,8 +96,7 @@ export default {
           .catch(_ => {});
       },
       toDetail(detail){
-          let user  = detail
-          this.$router.push({'/detail', params:{detail: user}})
+         
       }
   }
 }

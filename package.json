@@ -2,7 +2,7 @@
   "name": "js-night-watch",
   "version": "1.0.0",
   "description": "A Vue.js project",
-  "author": "wanghongjie04 <wanghongjie04@meituan.com>",
+  "author": "2498242826@qq.com",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
